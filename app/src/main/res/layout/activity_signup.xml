@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".ui.logsing.Signup">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="35dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:src="?attr/homeAsUpIndicator"
+            app:tint="@color/white" />
+
+    </FrameLayout>
+
+   <!-- <io.alterac.blurkit.BlurLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:blk_blurRadius="5"
+        app:blk_downscaleFactor="0.5"
+        app:blk_fps="30" />-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardv_regi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+     <!--   <io.alterac.blurkit.BlurLayout
+            android:id="@+id/blurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:blk_blurRadius="15"
+            app:blk_fps="100" />-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_crick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/signupFullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/custom_editext_bg"
+                android:drawableLeft="@drawable/cic_user"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="fullname"
+                android:inputType="textPersonName"
+                android:maxLength="64"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+            <EditText
+                android:id="@+id/signupEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signupFullname"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/custom_editext_bg"
+                android:drawableLeft="@drawable/cic_mail"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="email"
+                android:inputType="textEmailAddress"
+                android:maxLength="40"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/signupFullname" />
+
+            <EditText
+                android:id="@+id/signupMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signupEmail"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/custom_editext_bg"
+                android:drawableStart="@drawable/cic_mobile"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Mobile"
+                android:inputType="phone"
+                android:maxLength="40"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/signupEmail" />
+
+            <EditText
+                android:id="@+id/signupPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signupMobile"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/custom_editext_bg"
+                android:drawableStart="@drawable/cic_pass"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/signupMobile" />
+
+            <CheckBox
+                android:id="@+id/signupchck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:backgroundTint="@color/teal_700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signupPassword"
+                android:text="Accept our Terms &amp; Condition"/>
+            <Button
+                android:id="@+id/signupJoinBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Signup"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signupchck"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--     <RelativeLayout
+                 android:id="@+id/rv"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_gravity="center"
+                 android:layout_marginBottom="20dp"
+                 android:background="?attr/selectableItemBackgroundBorderless"
+                 android:gravity="center">
+
+
+                 <ImageView
+                     android:id="@+id/logo"
+                     android:layout_width="150dp"
+                     android:layout_height="80dp"
+                     android:layout_centerHorizontal="true"
+                     android:layout_gravity="center"
+                     android:layout_marginTop="20dp"
+                     android:src="@drawable/ic_crick" />
+
+
+                 <EditText
+                     android:id="@+id/signupFullname"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@id/logo"
+                     android:layout_marginLeft="30dp"
+                     android:layout_marginTop="10dp"
+                     android:layout_marginRight="30dp"
+                     android:background="@drawable/custom_editext_bg"
+                     android:drawableLeft="@drawable/cic_user"
+                     android:drawablePadding="10dp"
+                     android:ems="10"
+                     android:hint="fullname"
+                     android:inputType="textPersonName"
+                     android:maxLength="64"
+                     android:textColor="@color/black"
+                     android:textColorHint="@color/black"
+                     android:textSize="14sp"
+                     android:visibility="visible" />
+
+                 <EditText
+                     android:id="@+id/signupEmail"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@id/signupFullname"
+                     android:layout_marginLeft="30dp"
+                     android:layout_marginTop="10dp"
+                     android:layout_marginRight="30dp"
+                     android:background="@drawable/custom_editext_bg"
+                     android:drawableLeft="@drawable/cic_mail"
+                     android:drawablePadding="10dp"
+                     android:ems="10"
+                     android:hint="email"
+                     android:inputType="textEmailAddress"
+                     android:maxLength="40"
+                     android:textColor="@color/black"
+                     android:textColorHint="@color/black"
+                     android:textSize="14sp"
+                     android:visibility="visible" />
+
+                 <EditText
+                     android:id="@+id/signupMobile"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@id/signupEmail"
+                     android:layout_marginLeft="30dp"
+                     android:layout_marginTop="10dp"
+                     android:layout_marginRight="30dp"
+                     android:background="@drawable/custom_editext_bg"
+                     android:drawableStart="@drawable/cic_mobile"
+                     android:drawablePadding="10dp"
+                     android:ems="10"
+                     android:hint="Mobile"
+                     android:inputType="phone"
+                     android:maxLength="40"
+                     android:textColor="@color/black"
+                     android:textColorHint="@color/black"
+                     android:textSize="14sp"
+                     android:visibility="visible" />
+
+                 <EditText
+                     android:id="@+id/signupPassword"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@id/signupMobile"
+                     android:layout_gravity="center_horizontal"
+                     android:layout_marginLeft="30dp"
+                     android:layout_marginTop="10dp"
+                     android:layout_marginRight="30dp"
+                     android:background="@drawable/custom_editext_bg"
+                     android:drawableLeft="@drawable/cic_pass"
+                     android:drawablePadding="10dp"
+                     android:ems="10"
+                     android:hint="password"
+                     android:inputType="textPassword"
+                     android:maxLength="20"
+                     android:textColor="@color/black"
+                     android:textColorHint="@color/black"
+                     android:textSize="14sp"
+                     android:visibility="visible" />
+
+                 <Button
+                     android:id="@+id/signupJoinBtn"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@id/signupPassword"
+                     android:layout_alignParentStart="true"
+                     android:layout_alignParentEnd="true"
+                     android:layout_marginStart="30dp"
+                     android:layout_marginTop="10dp"
+                     android:layout_marginEnd="30dp"
+                     android:paddingBottom="10dp"
+                     android:stateListAnimator="@null"
+                     android:text="signup"
+                     android:textColor="@color/white"
+                     android:textStyle="bold"
+                     android:visibility="visible" />
+
+
+             </RelativeLayout>-->
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
